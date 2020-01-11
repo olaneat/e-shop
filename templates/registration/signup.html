@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+  <div class="container">
+    <form action="{% url 'register:signup' %}" method="post">
+	{% csrf_token %}
+	<div class="col-md-12 form-grop">
+      <div class="col-md-6 form-row">
+		{{signupform.username | as_crispy_field}}
+		<span></span>
+      </div>
+      <div class="form-row col-md-6">
+	    {{signupform.email | as_crispy_field}}
+        <span></span>
+      </div>
+    </div>
+    <div class="form-group col-md-12"> 
+      <div class="form-row col-md-6">
+	    {{signupform.last_name | as_crispy_field}}
+        <span></span>
+      </div>
+      <div class="form-row col-md-6">
+	    {{signupform.first_name| as_crispy_field}}
+        <span></span>
+      </div>
+	</div>
+	<div class="form-group col-md-12"> 
+      <div class="form-row col-md-6">
+	    {{signupform.password1 | as_crispy_field}}
+        <span></span>
+      </div>
+      <div class="form-row col-md-6">
+	    {{signupform.password2| as_crispy_field}}
+        <span></span>
+      </div>
+	</div>
+    <div class="col-md-12">
+	    {{signupform.location | as_crispy_field}}
+        <span></span>
+    </div>
+    <div class="form-group col-md-12"> 
+      <div class="form-row col-md-6">
+	    {{signupform.state | as_crispy_field}}
+        <span></span>
+      </div>
+	</div> 
+	<input type="submit" value="Sign Up">
+</form>
+  
+  </div>
+
+
+
+{% endblock content %}
