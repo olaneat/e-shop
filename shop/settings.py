@@ -27,7 +27,7 @@ import dj_database_url
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['smartz-store.heroku.com' ]
+ALLOWED_HOSTS = ['smart-storez.heroku.com' ]
 
 SECRET_KEY = SECRET_KEY = 'pvs5)&45(x_wtr0+e-jww%8g15if3hg&4wb3itfziozh=r$9l='
 

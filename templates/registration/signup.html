@@ -6,9 +6,15 @@
     <form action="{% url 'register:signup' %}" method="post">
 	{% csrf_token %}
 	<div class="col-md-12 form-grop">
-      <div class="col-md-6 form-row">
+      <div class="col-md-12 form-row">
 		{{signupform.username | as_crispy_field}}
 		<span></span>
+      </div>
+  </div>
+  <div>
+      <div class="form-row col-md-6">
+      {{signupform.phone_number | as_crispy_field}}
+        <span></span>
       </div>
       <div class="form-row col-md-6">
 	    {{signupform.email | as_crispy_field}}

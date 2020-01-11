@@ -9,12 +9,12 @@ class SignUpForm(UserCreationForm):
     last_name = forms.CharField(max_length=150)
     state = forms.CharField(max_length=150)
     location = forms.CharField(widget=forms.TextInput)
-    
+    phone_number =forms.CharField()
     
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2', 'email', 'first_name', 
-                    'last_name',  'location', 'state', 
+                    'last_name', 'phone_number', 'location', 'state', 
         ]
     
 
